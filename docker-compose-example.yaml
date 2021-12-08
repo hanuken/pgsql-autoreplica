@@ -1,0 +1,16 @@
+example_service:
+  image: postgres-autoreplica
+  ports:
+  - 5432:5432
+  environment:
+  - SOURCESERVER=
+  - SOURCEDBNAME=
+  - SOURCEPASSWD=   
+  - SOURCEUSER=
+  - DESTDBNAME=
+  - DESTDBUSER=
+  - DESTDBPASSWORD=
+  - POSTGRES_USER=
+  - POSTGRES_PASSWORD=
+  volumes:
+  - /path/to/store/postgres/data:/var/lib/postgresql/data
